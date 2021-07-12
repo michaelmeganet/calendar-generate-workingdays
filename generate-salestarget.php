@@ -60,6 +60,7 @@
         . ' method = "get">';
         echo '<label for = "annualtarget">Annual Sales Target</label>';
         echo '<input type = "text" id = "annualtarget" name = "annualtarget" value = ' . $annualtarget . ' >';
+        echo '<input type = "hidden" id = "year" name = "year" value = ' . $year . ' >';
         echo '<input type="submit" name="submit" value="Submit Form">'
         . '</form><br>';
 

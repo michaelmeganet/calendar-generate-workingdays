@@ -189,7 +189,13 @@ function getdailySalesTarget($annualtarget, $YearlyWorkingDays) {
 
 function calMonthlyTargetSession($month) {
 
-    $monthly_target = $_SESSION['month_' . $month . '_target'];
+//    print_r($_SESSION);
+//    echo "<br>";
+    if (isset($_SESSION['month_' . $month . '_target'])) {
+        $monthly_target = $_SESSION['month_' . $month . '_target'];
+    } else {
+        $monthly_target = 0;
+    }
 
     return $monthly_target;
 }
